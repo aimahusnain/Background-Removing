@@ -4,8 +4,17 @@ from rembg import remove
 from PIL import Image
 import io
 import logging
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(docs_url="/api/docs", openapi_url="/api/openapi.json")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
