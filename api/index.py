@@ -5,7 +5,7 @@ from PIL import Image
 import io
 import logging
 
-app = FastAPI()
+app = FastAPI(docs_url="/api/docs", openapi_url="/api/openapi.json")
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
