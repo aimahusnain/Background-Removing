@@ -10,6 +10,13 @@ const nextConfig = {
             : "/api/",
       },
       {
+        experimental: {
+          serverActions: {
+            bodySizeLimit: "20mb",
+          },
+        },
+      },
+      {
         source: "/docs",
         destination:
           process.env.NODE_ENV === "development"
