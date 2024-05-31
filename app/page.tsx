@@ -18,7 +18,7 @@ const UploadForm: React.FC = () => {
         formData.append('image', file);
 
         try {
-            const response = await fetch('https://removebg-delta.vercel.app/api/remove-background', {
+            const response = await fetch('http://localhost:3000/api/remove-background', {
                 method: 'POST',
                 body: formData
             });
